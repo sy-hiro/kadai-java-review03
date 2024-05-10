@@ -15,36 +15,21 @@ public class BaseBallTeam {
 //		this.lose = lose;
 //		this.draw = draw;
 //	}
-	public String getName() {
-		return name;
-	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public int getWin() {
-		return win;
 	}
 	public void setWin(int win) {
 		this.win = win;
 	}
-	public int getLose() {
-		return lose;
-	}
 	public void setLose(int lose) {
 		this.lose = lose;
-	}
-	public int getDraw() {
-		return draw;
 	}
 	public void setDraw(int draw) {
 		this.draw = draw;
 	}
-	public double getRate(int win , int lose) {		
+	public double getRate() {		
 		double getRate =(double) win/(win + lose);
 //		System.out.println(getRate);
-//		System.out.println("win: "+win);
-//		System.out.println("lose: "+lose);
-//		System.out.println("this.win: "+this.win);
 		return getRate;
 	}
 	public void report() {
@@ -53,7 +38,7 @@ public class BaseBallTeam {
 				win + "勝" +
 				lose + "敗" + 
 				draw + "分、勝率は" + 
-				getRate(win ,lose) +
+				getRate() +
 				"です。"
 			);
 	}
